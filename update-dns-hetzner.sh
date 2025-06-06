@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-[ ! -f /root/dynamic-dns/secrets-hetzner ] && echo 'secrets file is missing!' && exit 1
+[ ! -f $HOME/dynamic-dns/secrets-hetzner ] && echo 'secrets file is missing!' && exit 1
 
-source /root/dynamic-dns/secrets-hetzner
+source "$HOME/dynamic-dns/secrets-hetzner"
 
 # Hae julkinen IP
 public_ip=$(curl -s http://checkip.amazonaws.com/)
