@@ -1,0 +1,7 @@
+[Unit]
+Description=Hetzner DDNS updater
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/dynamic-dns
+ExecStart=%h/dynamic-dns/update-dns-hetzner.sh
